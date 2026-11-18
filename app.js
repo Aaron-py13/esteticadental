@@ -1,5 +1,5 @@
 /* =============================================================
-   ALTA ESTÉTICA DENTAL — DEMO WEB INFORMATIVA
+   CLÍNICA DENTAL APURÍMAC — WEB INFORMATIVA
    Edita aquí los datos reales de la clínica cuando sea necesario.
    ============================================================= */
 const CONFIG = {
@@ -78,7 +78,7 @@ function treatmentCards() {
       <div class="modal-treatment__text">
         <h4>${treatment.nombre}</h4>
         <p>${treatment.descripcion}</p>
-        <a href="${waLink(`Hola, quisiera consultar por ${treatment.nombre} en Alta Estética Dental.`)}" target="_blank" rel="noopener noreferrer">CONSULTAR ${icon('arrow')}</a>
+        <a href="${waLink(`Hola, quisiera consultar por ${treatment.nombre} en Clínica Dental Apurímac.`)}" target="_blank" rel="noopener noreferrer">CONSULTAR ${icon('arrow')}</a>
       </div>
     </article>`).join('');
 }
@@ -94,14 +94,14 @@ function getModalHTML(kind, detailKey) {
         <p class="modal-lead">${t.descripcion}</p>
         <div class="modal-info">Un odontólogo debe determinar qué tratamiento es adecuado tras una evaluación. <strong>Confirma directamente con la clínica si el servicio está disponible.</strong></div>
         <div class="modal-actions">
-          <a class="action-link" href="${waLink(`Hola, quisiera información sobre ${t.nombre} en Alta Estética Dental.`)}" target="_blank" rel="noopener noreferrer">${icon('whatsapp')} CONSULTAR POR WHATSAPP</a>
+          <a class="action-link" href="${waLink(`Hola, quisiera información sobre ${t.nombre} en Clínica Dental Apurímac.`)}" target="_blank" rel="noopener noreferrer">${icon('whatsapp')} CONSULTAR POR WHATSAPP</a>
           <button class="action-link action-link--secondary" data-modal="tratamientos" type="button">VER TODOS</button>
         </div>`;
     }
     return `
       <div class="modal-kicker">${icon('tooth')} SERVICIOS ODONTOLÓGICOS</div>
       <h2 class="modal-title" id="modalTitle">Nuestros tratamientos</h2>
-      <p class="modal-lead">Explora estas opciones de referencia. Los tratamientos ofrecidos y su disponibilidad deben confirmarse directamente con Alta Estética Dental.</p>
+      <p class="modal-lead">Explora estas opciones de referencia. Los tratamientos ofrecidos y su disponibilidad deben confirmarse directamente con Clínica Dental Apurímac.</p>
       <div class="modal-treatment-grid">${treatmentCards()}</div>`;
   }
   if (kind === 'promociones') {
@@ -111,7 +111,7 @@ function getModalHTML(kind, detailKey) {
       <img src="assets/promo.jpg" class="modal-hero-img" alt="Ilustración de una caja de regalo con lazo celeste">
       <p class="modal-lead">¿Quieres conocer las promociones vigentes? Escríbenos y consulta las campañas disponibles para ti.</p>
       <div class="modal-info"><strong>Promociones por confirmar.</strong> No mostramos precios ni descuentos que la clínica todavía no haya autorizado.</div>
-      <div class="modal-actions"><a class="action-link" href="${waLink('Hola, quisiera conocer las promociones vigentes de Alta Estética Dental.')}" target="_blank" rel="noopener noreferrer">${icon('whatsapp')} CONSULTAR PROMOCIONES</a></div>`;
+      <div class="modal-actions"><a class="action-link" href="${waLink('Hola, quisiera conocer las promociones vigentes de Clínica Dental Apurímac.')}" target="_blank" rel="noopener noreferrer">${icon('whatsapp')} CONSULTAR PROMOCIONES</a></div>`;
   }
   if (kind === 'reserva') {
     const minDate = getLocalDateISO();
@@ -179,7 +179,7 @@ function onBook(event) {
   const dateString = String(data.get('fecha'));
   const [year, month, day] = dateString.split('-');
   const message = [
-    '¡Hola, Alta Estética Dental! Quisiera solicitar una cita 🦷',
+    '¡Hola, Clínica Dental Apurímac! Quisiera solicitar una cita 🦷',
     '',
     `Nombre: ${String(data.get('nombre')).trim()}`,
     `Celular: ${String(data.get('celular')).trim() || 'No indicado'}`,

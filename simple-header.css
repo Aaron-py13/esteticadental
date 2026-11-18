@@ -1,127 +1,76 @@
-/* CAMBIO V3: solamente la cabecera principal, estilo VIVI Spa.
-   El resto de tarjetas, efectos, preloader, bienvenida y ventanas conserva V2. */
+/* Cabecera sencilla con el logo oficial de Clínica Dental Apurímac.
+   Mantiene las tarjetas y el resto del diseño tal como estaban. */
 .simple-brand {
   position: relative;
-  overflow: hidden;
   isolation: isolate;
-  padding: 6px 16px 23px;
-  margin: 0 auto 2px;
   width: 100%;
-  min-height: 0;
-  color: #123f62;
   text-align: center;
-  background: transparent;
+  padding: 9px 12px 20px;
+  margin: 0 auto 2px;
   border: 0;
+  background: transparent;
   box-shadow: none;
+  overflow: hidden;
 }
-.simple-brand::before,
-.simple-brand::after {
-  content: '';
-  pointer-events: none;
+.simple-brand::before, .simple-brand::after {
+  content: "";
   position: absolute;
   z-index: -1;
+  top: 67px;
   width: 650px;
-  height: 190px;
-  border-top: 1px solid rgba(199, 160, 100, .36);
+  height: 185px;
+  border-top: 1px solid rgba(33, 155, 219, .18);
   border-radius: 50%;
+  pointer-events: none;
 }
-.simple-brand::before {
-  left: -390px;
-  top: 67px;
-  transform: rotate(14deg);
-}
-.simple-brand::after {
-  right: -365px;
-  top: 67px;
-  transform: rotate(-16deg);
-}
-.simple-brand__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  z-index: 1;
-}
-.simple-brand__logo {
-  width: 68px;
-  height: 72px;
-  display: grid;
-  place-items: center;
-  color: #1178a5;
-  margin-bottom: -2px;
-}
-.simple-brand__logo svg {
-  width: 61px;
-  height: 68px;
-  stroke-width: 1.9;
-}
+.simple-brand::before { left: -400px; transform: rotate(14deg); }
+.simple-brand::after { right: -400px; transform: rotate(-16deg); }
+.simple-brand__content { display: flex; align-items: center; flex-direction: column; }
 .simple-brand__location {
+  color: #114a7c;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .34em;
+  padding-left: .34em;
+  margin: 1px 0 0;
+}
+.simple-brand__location i { color: #00aeee; font-style: normal; margin: 0 9px; letter-spacing: 0; }
+.simple-brand__official-logo {
   display: block;
-  font-size: .64rem;
-  letter-spacing: .37em;
-  font-weight: 750;
-  color: #346581;
-  margin-top: 4px;
-  padding-left: .37em;
+  width: clamp(275px, 40vw, 435px);
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  margin: -7px 0 -11px;
+  filter: drop-shadow(0 7px 14px rgba(0, 100, 160, .07));
 }
-.simple-brand__location i {
-  color: #c79751;
-  font-style: normal;
-  margin: 0 8px;
-  letter-spacing: 0;
-}
-.simple-brand h2 {
-  font: 400 clamp(2.25rem, 4.8vw, 3.55rem)/1.11 Georgia, 'Times New Roman', serif;
-  letter-spacing: .055em;
-  color: #154465;
-  margin: 9px 0 0;
-  text-wrap: balance;
-}
-.simple-brand__subtitle {
-  color: #147cb0;
-  font-size: clamp(.82rem, 1.6vw, 1.05rem);
-  letter-spacing: .55em;
-  padding-left: .55em;
-  margin: 7px 0 0;
-  font-weight: 500;
-}
-.simple-brand__line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 11px;
-  color: #c79f65;
-  font-size: .82rem;
-  margin: 11px 0 12px;
-}
-.simple-brand__line span {
-  display: block;
-  width: 54px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #c79f65);
-}
-.simple-brand__line span:last-child { transform: rotate(180deg); }
 .simple-brand p {
   margin: 0;
-  font: italic 400 clamp(1.02rem, 2.2vw, 1.4rem)/1.45 Georgia, 'Times New Roman', serif;
-  color: #285a79;
+  color: #24587b;
+  font: italic 400 clamp(1rem, 2vw, 1.4rem)/1.4 Georgia, 'Times New Roman', serif;
 }
-/* Espaciado suave entre cabecera y los apartados existentes */
-.simple-brand + .section-label { margin-top: 9px; }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.simple-brand + .section-label { margin-top: 5px; }
 @media (max-width: 640px) {
-  .simple-brand { padding: 6px 5px 19px; }
-  .simple-brand__logo { width: 60px; height: 64px; }
-  .simple-brand__logo svg { width: 53px; height: 58px; }
-  .simple-brand__location { font-size: .55rem; letter-spacing: .28em; }
-  .simple-brand h2 { font-size: clamp(1.78rem, 8vw, 2.6rem); letter-spacing: .022em; margin-top: 10px; }
-  .simple-brand__subtitle { font-size: .83rem; letter-spacing: .44em; margin-top: 5px; }
-  .simple-brand__line { margin: 9px 0 9px; }
-  .simple-brand p { font-size: clamp(.99rem, 3.8vw, 1.17rem); max-width: 340px; }
-  .simple-brand::before { left: -560px; }
-  .simple-brand::after { right: -560px; }
-  .simple-brand + .section-label { margin-top: 8px; }
+  .simple-brand { padding: 7px 5px 18px; }
+  .simple-brand__official-logo { width: min(82vw, 320px); margin: -7px 0 -12px; }
+  .simple-brand__location { font-size: .56rem; letter-spacing: .25em; }
+  .simple-brand p { font-size: clamp(.95rem, 3.8vw, 1.13rem); max-width: 330px; }
+  .simple-brand::before { left: -555px; }
+  .simple-brand::after { right: -555px; }
 }
-@media (max-width: 360px) {
-  .simple-brand h2 { font-size: 1.69rem; }
-  .simple-brand__location { letter-spacing: .20em; }
+@media(max-width: 360px) {
+  .simple-brand__official-logo { width: 82vw; }
+  .simple-brand__location { letter-spacing: .18em; }
+  .simple-brand p { max-width: 265px; }
 }
