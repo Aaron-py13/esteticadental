@@ -1,0 +1,127 @@
+/* CAMBIO V3: solamente la cabecera principal, estilo VIVI Spa.
+   El resto de tarjetas, efectos, preloader, bienvenida y ventanas conserva V2. */
+.simple-brand {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 6px 16px 23px;
+  margin: 0 auto 2px;
+  width: 100%;
+  min-height: 0;
+  color: #123f62;
+  text-align: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.simple-brand::before,
+.simple-brand::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  width: 650px;
+  height: 190px;
+  border-top: 1px solid rgba(199, 160, 100, .36);
+  border-radius: 50%;
+}
+.simple-brand::before {
+  left: -390px;
+  top: 67px;
+  transform: rotate(14deg);
+}
+.simple-brand::after {
+  right: -365px;
+  top: 67px;
+  transform: rotate(-16deg);
+}
+.simple-brand__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.simple-brand__logo {
+  width: 68px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  color: #1178a5;
+  margin-bottom: -2px;
+}
+.simple-brand__logo svg {
+  width: 61px;
+  height: 68px;
+  stroke-width: 1.9;
+}
+.simple-brand__location {
+  display: block;
+  font-size: .64rem;
+  letter-spacing: .37em;
+  font-weight: 750;
+  color: #346581;
+  margin-top: 4px;
+  padding-left: .37em;
+}
+.simple-brand__location i {
+  color: #c79751;
+  font-style: normal;
+  margin: 0 8px;
+  letter-spacing: 0;
+}
+.simple-brand h2 {
+  font: 400 clamp(2.25rem, 4.8vw, 3.55rem)/1.11 Georgia, 'Times New Roman', serif;
+  letter-spacing: .055em;
+  color: #154465;
+  margin: 9px 0 0;
+  text-wrap: balance;
+}
+.simple-brand__subtitle {
+  color: #147cb0;
+  font-size: clamp(.82rem, 1.6vw, 1.05rem);
+  letter-spacing: .55em;
+  padding-left: .55em;
+  margin: 7px 0 0;
+  font-weight: 500;
+}
+.simple-brand__line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  color: #c79f65;
+  font-size: .82rem;
+  margin: 11px 0 12px;
+}
+.simple-brand__line span {
+  display: block;
+  width: 54px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c79f65);
+}
+.simple-brand__line span:last-child { transform: rotate(180deg); }
+.simple-brand p {
+  margin: 0;
+  font: italic 400 clamp(1.02rem, 2.2vw, 1.4rem)/1.45 Georgia, 'Times New Roman', serif;
+  color: #285a79;
+}
+/* Espaciado suave entre cabecera y los apartados existentes */
+.simple-brand + .section-label { margin-top: 9px; }
+@media (max-width: 640px) {
+  .simple-brand { padding: 6px 5px 19px; }
+  .simple-brand__logo { width: 60px; height: 64px; }
+  .simple-brand__logo svg { width: 53px; height: 58px; }
+  .simple-brand__location { font-size: .55rem; letter-spacing: .28em; }
+  .simple-brand h2 { font-size: clamp(1.78rem, 8vw, 2.6rem); letter-spacing: .022em; margin-top: 10px; }
+  .simple-brand__subtitle { font-size: .83rem; letter-spacing: .44em; margin-top: 5px; }
+  .simple-brand__line { margin: 9px 0 9px; }
+  .simple-brand p { font-size: clamp(.99rem, 3.8vw, 1.17rem); max-width: 340px; }
+  .simple-brand::before { left: -560px; }
+  .simple-brand::after { right: -560px; }
+  .simple-brand + .section-label { margin-top: 8px; }
+}
+@media (max-width: 360px) {
+  .simple-brand h2 { font-size: 1.69rem; }
+  .simple-brand__location { letter-spacing: .20em; }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 355" role="img" aria-labelledby="title">
+<title id="title">Dientito feliz usando un teléfono celular</title>
+<defs>
+ <linearGradient id="enamel" x1=".05" y1=".07" x2=".96" y2=".98"><stop stop-color="#ffffff"/><stop offset=".55" stop-color="#effdff"/><stop offset="1" stop-color="#bfe9f7"/></linearGradient>
+ <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#16cbe0"/><stop offset="1" stop-color="#0570b4"/></linearGradient>
+ <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4ffff"/><stop offset="1" stop-color="#9eebff"/></linearGradient>
+ <filter id="shade" x="-50%" y="-50%" width="200%" height="220%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#033f66" flood-opacity=".3"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<circle cx="175" cy="168" r="133" fill="#79edff" opacity=".10"/>
+<circle cx="175" cy="168" r="103" fill="#9ff5ff" opacity=".11"/>
+<ellipse cx="173" cy="319" rx="104" ry="15" fill="#012e56" opacity=".25"/>
+<g filter="url(#shade)">
+ <path d="M169 91C135 65 79 75 65 118c-13 36 1 64 17 91 10 17 16 68 36 72 25 6 26-60 50-62 26 0 25 69 49 65 25-4 29-61 37-84 10-29 30-48 22-83-11-43-72-56-107-26Z" fill="url(#enamel)" stroke="#c4edf9" stroke-width="5"/>
+ <path d="M85 119c13-26 39-32 60-23" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" opacity=".9"/>
+ <ellipse cx="125" cy="165" rx="7" ry="10" fill="#08446e"/>
+ <ellipse cx="204" cy="165" rx="7" ry="10" fill="#08446e"/>
+ <path d="M143 192q22 26 43 0" fill="none" stroke="#0b5377" stroke-width="6" stroke-linecap="round"/>
+ <ellipse cx="103" cy="184" rx="17" ry="8" fill="#ffa5ae" opacity=".5"/>
+ <ellipse cx="226" cy="184" rx="17" ry="8" fill="#ffa5ae" opacity=".5"/>
+ <path d="M95 218q-30 11-40 39" stroke="#d9faff" stroke-width="16" fill="none" stroke-linecap="round"/>
+ <path d="M240 216q23 0 36 28" stroke="#d9faff" stroke-width="15" fill="none" stroke-linecap="round"/>
+ <g transform="rotate(12 263 225)"><rect x="232" y="170" rx="16" width="73" height="119" fill="#0b3f6d" stroke="#93edff" stroke-width="4"/><rect x="238" y="179" rx="10" width="61" height="99" fill="url(#screen)"/><circle cx="268" cy="226" r="20" fill="#25d366"/><path d="M260 215c-2-2-5 1-5 4 1 9 13 21 24 20 3 0 6-3 3-5l-6-4-4 4c-5-2-9-6-11-11l3-4-4-4Z" fill="#fff"/><rect x="260" y="282" rx="2" width="16" height="3" fill="#9acbe2"/></g>
+ <path d="M246 244q15-11 29 2" stroke="#e9fcff" stroke-width="14" fill="none" stroke-linecap="round"/>
+</g>
+<path d="M72 55l7 19 19 7-19 7-7 19-7-19-19-7 19-7Z" fill="#ffdc93"/>
+<path d="M272 62l5 12 12 5-12 5-5 12-5-12-12-5 12-5Z" fill="#79eaff"/>
+<circle cx="297" cy="132" r="5" fill="#ffdb8f"/>
+<circle cx="43" cy="176" r="5" fill="#7ce4ff"/>
+</svg>

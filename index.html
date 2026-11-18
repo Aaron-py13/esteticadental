@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#074879">
+  <meta name="description" content="Alta Estética Dental en Abancay. Conoce nuestros tratamientos odontológicos, solicita tu cita y encuentra nuestra sede.">
+  <title>Alta Estética Dental | Abancay</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="simple-header.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-tooth" viewBox="0 0 100 112">
+      <path d="M48 16C33 7 12 9 9 28c-3 22 11 32 15 55 2 12 6 21 14 19 9-2 6-26 13-28 7-1 7 26 16 28 10 2 14-14 16-26 4-22 18-41 8-58-8-15-27-15-43-2Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+      <path d="M48 16c9 7 19 10 31 8" fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" opacity=".55"/>
+      <path d="M75 0l3 10 10 3-10 3-3 10-3-10-10-3 10-3Z" fill="#d6a75b" stroke="none"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="M5 18 19 4M9 4h10v10"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M22 12a10 10 0 1 0-11.6 9.88v-7h-2.5V12h2.5V9.8c0-2.47 1.47-3.83 3.71-3.83 1.07 0 2.19.19 2.19.19v2.43h-1.25c-1.23 0-1.61.76-1.61 1.55V12h2.75l-.44 2.88h-2.31v7A10 10 0 0 0 22 12Z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path d="M20.4 11.7a8.5 8.5 0 0 1-12.1 7.7L3 21l1.65-5.1A8.6 8.6 0 1 1 20.4 11.7Z"/><path d="M8.1 7.8c-.2-.4-.42-.4-.67-.4s-.53-.02-.8.27-.94.9-.94 2.14.96 2.47 1.1 2.63c.13.16 1.88 3 4.62 4.07 2.29.89 2.75.72 3.24.68.5-.05 1.61-.66 1.83-1.3.23-.63.23-1.18.16-1.3s-.5-.2-1.06-.47-1.25-.63-1.44-.7-.34-.11-.5.11-.57.7-.7.84-.26.16-.49.05a7.4 7.4 0 0 1-2.16-1.34 8.1 8.1 0 0 1-1.49-1.86c-.16-.27-.02-.4.12-.54l.4-.46c.14-.16.19-.27.28-.45s.05-.34-.02-.48l-.69-1.67Z" stroke-width=".85"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.8"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.18 2A19.7 19.7 0 0 1 3.1 5.18 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.72l.47 2.9a2 2 0 0 1-.57 1.7L8.16 11a16 16 0 0 0 4.84 4.84l1.68-1.84a2 2 0 0 1 1.7-.57l2.9.47A2 2 0 0 1 22 16.9Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4M17 3v4M3 10h18m-13 6 2.5 2.5 5-5"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="12" rx="2"/><path d="M2 6h20v4H2zM12 6v15m0-15C9 6 5 5.8 5 3.5 5 1 10-1 12 6Zm0 0c3 0 7-.2 7-2.5C19 1 14-1 12 6Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5 19 19M19 5 5 19"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="m12 2 2.5 7.5L22 12l-7.5 2.5L12 22l-2.5-7.5L2 12l7.5-2.5Z"/></symbol>
+  </svg>
+
+  <!-- Sitio principal: visible de inmediato, sin carga ni pantalla de bienvenida -->
+  <main id="site" class="site site--ready">
+    <div class="background-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="site__inner">
+      <!-- Encabezado minimalista: inspirado en la composición sencilla de VIVI Spa -->
+      <header class="simple-brand" aria-label="Alta Estética Dental, Abancay">
+        <div class="simple-brand__content">
+          <span class="simple-brand__logo" aria-hidden="true"><svg><use href="#i-tooth"/></svg></span>
+          <span class="simple-brand__location">ABANCAY <i>✦</i> PERÚ</span>
+          <h2>ALTA ESTÉTICA</h2>
+          <div class="simple-brand__subtitle">DENTAL</div>
+          <div class="simple-brand__line" aria-hidden="true"><span></span> ✦ <span></span></div>
+          <p>Transformamos sonrisas, inspiramos confianza</p>
+        </div>
+      </header>
+      <div class="section-label"><span class="section-label__sparkle">✦</span> DESCUBRE ALTA ESTÉTICA DENTAL <span class="section-label__sparkle">✦</span></div>
+
+      <div class="content-stack">
+        <a class="link-card link-card--facebook reveal" href="https://www.facebook.com/altaesteticaabancay/" target="_blank" rel="noopener noreferrer" aria-label="Visitar el Facebook de Alta Estética Dental">
+          <span class="link-card__image facebook-art"><img src="assets/facebook-3d.jpg" alt="" loading="lazy"><span class="facebook-art__shimmer" aria-hidden="true"></span></span>
+          <span class="link-card__body"><span class="link-card__micro">NUESTRA COMUNIDAD</span><span class="link-card__title"><span class="facebook-brand-icon"><svg><use href="#i-fb"/></svg></span><span class="link-card__heading">Facebook</span></span><span class="link-card__desc">Síguenos y descubre las novedades de la clínica.</span></span>
+          <span class="link-card__button">VISITAR FACEBOOK <i><svg><use href="#i-arrow-up"/></svg></i></span>
+        </a>
+
+        <section class="treatments-feature reveal" aria-labelledby="tratamientos-heading">
+          <div class="treatments-feature__text">
+            <div class="eyebrow"><svg><use href="#i-sparkle"/></svg> CUIDAMOS TU SONRISA</div>
+            <h3 id="tratamientos-heading">Nuestros <em>tratamientos</em></h3>
+            <p>Conoce opciones de cuidado y estética dental. Nuestro equipo puede orientarte según tus necesidades.</p>
+            <button class="btn btn--primary treatments-feature__cta" type="button" data-modal="tratamientos">VER TRATAMIENTOS <span class="btn__circle"><svg><use href="#i-arrow-up"/></svg></span></button>
+          </div>
+          <div class="treatments-feature__visual"><img src="assets/hero-tooth.jpg" alt="Ilustración conceptual de un diente blanco con brillo" loading="lazy"></div>
+          <div class="treatments-feature__gallery">
+            <button type="button" class="mini-treatment" data-treatment="limpieza"><img src="assets/limpieza.jpg" alt="Limpieza dental" loading="lazy"><span>Limpieza <b>dental</b></span></button>
+            <button type="button" class="mini-treatment" data-treatment="blanqueamiento"><img src="assets/blanqueamiento.jpg" alt="Blanqueamiento dental" loading="lazy"><span>Blanqueamiento</span></button>
+            <button type="button" class="mini-treatment" data-treatment="ortodoncia"><img src="assets/ortodoncia.jpg" alt="Ortodoncia" loading="lazy"><span>Ortodoncia</span></button>
+            <button type="button" class="mini-treatment" data-treatment="diseno"><img src="assets/diseno.jpg" alt="Diseño de sonrisa" loading="lazy"><span>Diseño de <b>sonrisa</b></span></button>
+          </div>
+        </section>
+
+        <button class="link-card link-card--promos reveal" type="button" data-modal="promociones">
+          <span class="link-card__image"><img src="assets/promo.jpg" alt="Ilustración de un regalo con lazo celeste" loading="lazy"></span>
+          <span class="link-card__body"><span class="link-card__micro">OPORTUNIDADES PARA SONREÍR</span><span class="link-card__heading">Promociones</span><span class="link-card__desc">Conoce las campañas y novedades disponibles</span></span>
+          <span class="link-card__button">VER PROMOCIONES <i><svg><use href="#i-arrow-up"/></svg></i></span>
+        </button>
+
+        <button class="link-card link-card--appointment reveal" type="button" data-modal="reserva">
+          <span class="link-card__image"><img src="assets/clinic-room.jpg" alt="Imagen ilustrativa de una recepción dental" loading="lazy"></span>
+          <span class="link-card__body"><span class="link-card__micro">TU SONRISA EMPIEZA AQUÍ</span><span class="link-card__heading">Reserva tu cita</span><span class="link-card__desc">Tu camino hacia una sonrisa saludable empieza aquí</span></span>
+          <span class="link-card__button link-card__button--light">AGENDAR AHORA <i><svg><use href="#i-arrow-up"/></svg></i></span>
+        </button>
+
+        <button class="link-card link-card--location reveal" type="button" data-modal="ubicacion">
+          <span class="link-card__image"><img src="assets/clinic-room.jpg" alt="Imagen ilustrativa de instalaciones odontológicas" loading="lazy"></span>
+          <span class="link-card__body"><span class="link-card__micro">TE ESPERAMOS EN ABANCAY</span><span class="link-card__heading">Nuestra sede</span><span class="link-card__desc">Av. Días Bárcenas 208, Abancay, Perú</span></span>
+          <span class="link-card__button">VER UBICACIÓN <i><svg><use href="#i-arrow-up"/></svg></i></span>
+        </button>
+      </div>
+
+      <footer class="contact-footer reveal" aria-labelledby="contact-title">
+        <div class="contact-footer__mascot"><img src="assets/dientito-celular.svg" alt="Dientito ilustrado sosteniendo un celular con el símbolo de WhatsApp"></div>
+        <div class="contact-footer__content">
+          <span class="contact-footer__eyebrow"><span class="contact-footer__live"></span> ESTAMOS A UN MENSAJE DE DISTANCIA</span>
+          <h3 id="contact-title">¡Hablemos de <em>tu sonrisa!</em></h3>
+          <p>¿Tienes una consulta o quieres agendar tu cita? Comunícate con nuestra clínica de la forma que prefieras.</p>
+          <div class="contact-footer__actions">
+            <a class="contact-footer__wa" href="https://wa.me/51927841896?text=Hola%2C%20Alta%20Est%C3%A9tica%20Dental.%20Quisiera%20solicitar%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp al 927 841 896"><span class="contact-footer__action-icon"><svg><use href="#i-whatsapp"/></svg></span><span class="contact-footer__action-copy"><small>ESCRÍBENOS POR WHATSAPP</small><strong>+51 927 841 896</strong></span><span class="contact-footer__action-arrow"><svg><use href="#i-arrow-up"/></svg></span></a>
+            <a class="contact-footer__phone" href="tel:+51956218387" aria-label="Llamar al 956 218 387"><span class="contact-footer__action-icon"><svg><use href="#i-phone"/></svg></span><span class="contact-footer__action-copy"><small>¿PREFIERES LLAMARNOS?</small><strong>+51 956 218 387</strong></span><span class="contact-footer__action-arrow"><svg><use href="#i-arrow-up"/></svg></span></a>
+          </div>
+        </div>
+      </footer>
+      <p class="footnote">© <span id="year">2026</span> ALTA ESTÉTICA DENTAL <span>·</span> ABANCAY, PERÚ</p>
+      <p class="demo-disclaimer">* Imágenes ilustrativas. Consulta la disponibilidad real de servicios y promociones con la clínica.</p>
+    </div>
+  </main>
+
+  <!-- Diálogos con contenido real -->
+  <div class="modal-shell" id="modalShell" hidden>
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="modal-close" id="closeModal" type="button" aria-label="Cerrar ventana"><svg><use href="#i-close"/></svg></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+</body>
+</html>
