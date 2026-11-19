@@ -357,3 +357,38 @@ body{background:#f1f9fc}
 @media (prefers-reduced-motion: reduce) {
   .link-card:hover { transform:none; }
 }
+
+/* =========================================================
+   V6 — SOLO Instagram y TikTok: nuevas tarjetas sociales.
+   Mantiene las demás secciones, el diseño y el responsive.
+   ========================================================= */
+.social-card { isolation:isolate; overflow:hidden; cursor:pointer; }
+.social-card::before {content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;opacity:0;background:linear-gradient(112deg,transparent 20%,rgba(255,255,255,.52) 48%,transparent 70%);transform:translateX(-75%);transition:opacity .35s ease,transform .75s ease;z-index:1;}
+.social-card:hover::before,.social-card:focus-visible::before {opacity:1;transform:translateX(75%);}
+.social-card > * { position:relative;z-index:2; }
+.social-card .link-card__image { background: #eefaff; }
+.social-card__art img {width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.social-card:hover .social-card__art img,.social-card:focus-visible .social-card__art img{transform:scale(1.075);}
+.social-card__shimmer {position:absolute;inset:0;background:linear-gradient(110deg,transparent 34%,rgba(255,255,255,.42) 51%,transparent 63%);transform:translateX(-140%);transition:transform .75s ease;pointer-events:none;}
+.social-card:hover .social-card__shimmer,.social-card:focus-visible .social-card__shimmer { transform:translateX(145%); }
+.social-brand-icon {display:grid;place-items:center;width:31px;height:31px;border-radius:9px;flex:0 0 31px;color:white;box-shadow:0 5px 12px rgba(8,76,123,.2);}
+.social-brand-icon svg {height:21px!important;width:21px!important;color:#fff!important;fill:none;stroke:currentColor;stroke-width:2.0;stroke-linecap:round;stroke-linejoin:round;}
+.social-brand-icon--instagram {background:linear-gradient(135deg,#fbbf51 0%,#fb496c 45%,#8b43dc 100%);}
+.social-brand-icon--tiktok {background:#102e49;box-shadow:4px 3px 0 rgba(4,196,225,.35),-3px -2px 0 rgba(239,92,152,.20);}
+.social-brand-icon--tiktok svg {fill:white!important;stroke:none;}
+.link-card--instagram{background:linear-gradient(115deg,#fff 15%,#f9f5ff 59%,#eaf8ff 100%);}
+.link-card--instagram .link-card__micro {color:#8b4d9e;}
+.link-card--instagram .link-card__button {background:linear-gradient(115deg,#8d4cc5,#c24f91);}
+.link-card--tiktok{background:linear-gradient(115deg,#fff 15%,#f3fbff 63%,#e9f4ff 100%);}
+.link-card--tiktok .link-card__micro {color:#178ba7;}
+.link-card--tiktok .link-card__button {background:linear-gradient(115deg,#173c60,#087ea3);}
+.social-card:hover,.social-card:focus-visible {box-shadow:0 16px 35px rgba(10,115,161,.2),0 0 0 2px rgba(87,205,244,.21);}
+.social-card:hover .link-card__button {box-shadow:0 8px 21px rgba(16,83,131,.26);}
+.social-notice {position:fixed;bottom:22px;left:50%;z-index:300;max-width:min(90vw,450px);width:max-content;transform:translateX(-50%);background:#0a3659;color:#fff;border:1px solid #6bcaf4;border-radius:14px;box-shadow:0 10px 36px #03284344;padding:13px 20px;text-align:center;font-weight:650;font-size:.87rem;line-height:1.4;}
+.social-notice[hidden]{display:none!important;}
+@media(max-width:620px){
+ .social-brand-icon{width:21px;height:21px;flex-basis:21px;border-radius:6px;}
+ .social-brand-icon svg{width:16px!important;height:16px!important;}
+ .social-notice{bottom:14px;font-size:.78rem;padding:12px 15px;}
+}
+@media(prefers-reduced-motion:reduce){.social-card::before,.social-card__shimmer{display:none;}}

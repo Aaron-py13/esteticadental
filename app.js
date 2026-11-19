@@ -6,6 +6,8 @@ const CONFIG = {
   whatsapp: '51927841896', // Número que recibe consultas y reservas
   telefono: '51956218387', // Número para llamadas
   facebook: 'https://www.facebook.com/altaesteticaabancay/',
+  instagram: '', // Pega aquí el enlace oficial (ej.: https://www.instagram.com/tuusuario/)
+  tiktok: '', // Pega aquí el enlace oficial (ej.: https://www.tiktok.com/@tuusuario)
   direccion: 'Av. Días Bárcenas 208, Abancay, Perú, 03001'
 };
 
@@ -200,6 +202,21 @@ function onBook(event) {
 
 // Delegación de eventos: cada tarjeta abre su apartado correspondiente.
 document.addEventListener('click', (event) => {
+  const socialTrigger = event.target.closest('[data-social]');
+  if (socialTrigger) {
+    const platform = socialTrigger.dataset.social;
+    const socialURL = CONFIG[platform];
+    if (socialURL && /^https:\/\//i.test(socialURL)) {
+      window.open(socialURL, '_blank', 'noopener,noreferrer');
+    } else {
+      const notice = $('#socialNotice');
+      notice.textContent = `Aún falta configurar el enlace oficial de ${platform === 'instagram' ? 'Instagram' : 'TikTok'}.`;
+      notice.hidden = false;
+      clearTimeout(window.socialNoticeTimer);
+      window.socialNoticeTimer = setTimeout(() => { notice.hidden = true; }, 3600);
+    }
+    return;
+  }
   const treatmentTrigger = event.target.closest('[data-treatment]');
   if (treatmentTrigger) {
     openModal('tratamientos', treatmentTrigger.dataset.treatment);
